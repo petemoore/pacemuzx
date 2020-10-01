@@ -8,19 +8,22 @@ own copies of the following files (from the Midway ROM set):
 
   pacman.6e pacman.6f pacman.6h pacman.6j
 
-Copy them to the same directory as this file, then run make.bat (Windows).
-Under Mac/Linux/Un*x, use make to build the final pacemuzx.tap image file,
-or combine manually using:
+Copy them to the same directory as this file, then perform the following steps:
 
-  cat start.part pacman.6[efhj] end.part > pacemuzx.tap
+* Install https://github.com/simonowen/tile2sam (e.g. in a python3 virtual environment)
+* Build/install https://github.com/mkoloberdin/pasmo
+* Run `make.bat` (Windows) or `make dist` (Mac/Linux/Un*x)
+* Mac/Linux/Un*x: Copy/move the `pacman.6*` ROM files into the generated `dist` directory,
+  `cd dist` and run `make` to generate `pacemuzx.tap`
 
-Then load the .tap tape image in a Spectrum emulator of your choosing.
+Then load the .tap tape image in a Spectrum emulator of your choosing (making sure
+to select a Spectrum +2A/+2B/+3 model, as noted above).
 
 Controls:
 
   1 = 1 player start
   2 = 2 player start
-  3 = insert coin
+  3 = insert coin (NOTE: you need to do this first, once per player!)
 
   C = colour sprites
   M = mono sprites
